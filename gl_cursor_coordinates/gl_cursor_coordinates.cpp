@@ -23,4 +23,3 @@ void gl_cursor_coordinates::set_cursor_pos(double xpos, double ypos)
 
     std::cout << m_cursor_x << ", " << m_cursor_y << std::endl;
 }
-

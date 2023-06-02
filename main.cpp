@@ -17,6 +17,8 @@ const unsigned int SCREEN_HEIGHT = 500;
 
 void mouse_callback(GLFWwindow* window, double xpos, double ypos);
 
+double mouse_xpos, mouse_ypos;
+
 int main()
 {
     if (!glfwInit()) return -1;
@@ -45,6 +47,8 @@ int main()
         glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
+        cursor_coordinates.set_cursor_pos(mouse_xpos, mouse_ypos);
+
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
@@ -54,5 +58,6 @@ int main()
 
 void mouse_callback(GLFWwindow* window, double xpos, double ypos)
 {
-//    cursor_coordinates.set_cursor_pos(xpos, ypos);
+    mouse_xpos = xpos;
+    mouse_ypos = ypos;
 }
