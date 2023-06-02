@@ -8,6 +8,7 @@
 
 #include "gl_textrenderer/gl_textrenderer.h"
 #include "gl_gridlines/gl_gridlines.h"
+#include "gl_cursor_coordinates.h"
 
 using namespace gl;
 
@@ -37,6 +38,8 @@ int main()
 
     glbinding::initialize(glfwGetProcAddress);
 
+    gl_cursor_coordinates cursor_coordinates(SCREEN_WIDTH, SCREEN_HEIGHT);
+
     while (!glfwWindowShouldClose(window))
     {
         glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
@@ -51,4 +54,5 @@ int main()
 
 void mouse_callback(GLFWwindow* window, double xpos, double ypos)
 {
+//    cursor_coordinates.set_cursor_pos(xpos, ypos);
 }
