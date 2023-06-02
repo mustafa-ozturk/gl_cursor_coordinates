@@ -9,6 +9,8 @@ public:
     ~gl_cursor_coordinates();
 
     void set_cursor_pos(double xpos, double ypos);
+
+    void draw();
 private:
     gl_textrenderer* m_textrenderer;
     unsigned int m_screen_width;

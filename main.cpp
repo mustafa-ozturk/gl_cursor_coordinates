@@ -48,6 +48,7 @@ int main()
         glClear(GL_COLOR_BUFFER_BIT);
 
         cursor_coordinates.set_cursor_pos(mouse_xpos, mouse_ypos);
+        cursor_coordinates.draw();
 
         glfwSwapBuffers(window);
         glfwPollEvents();
